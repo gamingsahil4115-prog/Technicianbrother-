@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Technician Brother | Buy, Sell, Repair & Service</title>
+
+<meta name="description" content="Technician Brother - Buy, sell, repair and learn about AC, fridge, cooler, washing machine, RO, cameras, house wiring, geyser and home appliances.">
+
+<meta name="robots" content="index, follow">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#05080d;
+    color:#f5f7fa;
+    line-height:1.5;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#05080d;
+    border-bottom:1px solid #1d2733;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.top-header{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:230px;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#071421;
+    border:1px solid #1685ff;
+    font-size:25px;
+}
+
+.logo-text h1{
+    font-size:24px;
+    color:white;
+}
+
+.logo-text h1 span{
+    color:#1685ff;
+}
+
+.logo-text p{
+    font-size:12px;
+    color:#aab6c4;
+}
+
+.search-box{
+    flex:1;
+    height:44px;
+    display:flex;
+    background:#0b1119;
+    border:1px solid #273545;
+    border-radius:9px;
+    overflow:hidden;
+}
+
+.search-box input{
+    flex:1;
+    background:transparent;
+    border:0;
+    outline:0;
+    color:white;
+    padding:0 15px;
+    font-size:14px;
+}
+
+.search-box button{
+    width:52px;
+    border:0;
+    background:#087df5;
+    color:white;
+    font-size:20px;
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.login-btn{
+    white-space:nowrap;
+    padding:10px 14px;
+    border:1px solid #334252;
+    border-radius:8px;
+    color:#dbe4ee;
+    font-size:13px;
+}
+
+.cart{
+    font-size:22px;
+}
+
+/* ================= NAV ================= */
+
+.navbar{
+    border-top:1px solid #111b26;
+    overflow-x:auto;
+}
+
+.nav-inner{
+    display:flex;
+    min-width:max-content;
+}
+
+.nav-item{
+    padding:13px 15px;
+    font-size:13px;
+    color:#dce5ee;
+    border-right:1px solid #17222e;
+    transition:.2s;
+}
+
+.nav-item:hover,
+.nav-item.active{
+    background:#087df5;
+    color:white;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:390px;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at 80% 40%,rgba(0,130,255,.20),transparent 35%),
+        linear-gradient(110deg,#07101a,#05080d);
+    border-bottom:1px solid #17222e;
+}
+
+.hero-content{
+    padding:55px 0;
+    max-width:650px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 13px;
+    border-radius:20px;
+    background:#09233a;
+    border:1px solid #0c75cf;
+    color:#d9edff;
+    font-size:12px;
+    margin-bottom:17px;
+}
+
+.hero h2{
+    font-size:48px;
+    line-height:1.08;
+    margin-bottom:18px;
+}
+
+.hero h2 span{
+    color:#1590ff;
+}
+
+.hero p{
+    color:#b8c4d0;
+    max-width:650px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 23px;
+    border-radius:25px;
+    border:0;
+    background:#087df5;
+    color:white;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    background:#1590ff;
+}
+
+.btn.secondary{
+    background:transparent;
+    border:1px solid #087df5;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:45px 0;
+}
+
+.section-title{
+    margin-bottom:25px;
+}
+
+.section-title h2{
+    font-size:27px;
+}
+
+.section-title p{
+    color:#8f9cab;
+    margin-top:4px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.category-card{
+    background:#0a1017;
+    border:1px solid #263342;
+    border-radius:13px;
+    padding:15px;
+    min-height:150px;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.category-card:hover{
+    transform:translateY(-5px);
+    border-color:#087df5;
+    box-shadow:0 8px 30px rgba(0,125,245,.10);
+}
+
+.category-icon{
+    height:85px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+}
+
+.category-card h3{
+    font-size:15px;
+}
+
+.category-card p{
+    color:#768494;
+    font-size:11px;
+    margin-top:4px;
+}
+
+/* ================= BUY SELL ================= */
+
+.buy-sell{
+    background:#070c12;
+    border:1px solid #087df5;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 0 35px rgba(0,125,245,.08);
+}
+
+.buy-sell-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.buy-sell-head h2{
+    font-size:28px;
+}
+
+.buy-sell-head p{
+    color:#8996a5;
+    font-size:13px;
+}
+
+.buy-sell-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.buy-box,
+.sell-box{
+    min-height:180px;
+    border-radius:15px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.buy-box{
+    background:linear-gradient(135deg,#071b32,#06101b);
+    border:1px solid #087df5;
+}
+
+.sell-box{
+    background:linear-gradient(135deg,#062019,#06110d);
+    border:1px solid #08a956;
+}
+
+.big-icon{
+    font-size:52px;
+}
+
+.buy-box h3,
+.sell-box h3{
+    font-size:31px;
+    margin-bottom:5px;
+}
+
+.buy-box p,
+.sell-box p{
+    color:#aeb9c5;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.product-card{
+    background:#0a1017;
+    border:1px solid #263342;
+    border-radius:13px;
+    overflow:hidden;
+    transition:.25s;
+}
+
+.product-card:hover{
+    transform:translateY(-4px);
+    border-color:#087df5;
+}
+
+.product-image{
+    height:135px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:62px;
+    background:#0d151e;
+}
+
+.product-info{
+    padding:14px;
+}
+
+.product-tag{
+    display:inline-block;
+    padding:3px 7px;
+    border-radius:5px;
+    background:#087df5;
+    font-size:9px;
+    margin-bottom:8px;
+}
+
+.product-info h3{
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+.price{
+    color:#20a7ff;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.rating{
+    color:#ffc107;
+    font-size:12px;
+    margin:4px 0 12px;
+}
+
+.add-cart{
+    width:100%;
+    padding:9px;
+    border:0;
+    border-radius:7px;
+    background:#087df5;
+    color:white;
+    font-weight:bold;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.service{
+    padding:20px;
+    background:#0a1017;
+    border:1px solid #263342;
+    border-radius:13px;
+}
+
+.service-icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.service h3{
+    font-size:15px;
+}
+
+.service p{
+    font-size:12px;
+    color:#8491a0;
+}
+
+/* ================= GUIDES ================= */
+
+.guide-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.guide{
+    background:#0a1017;
+    border:1px solid #263342;
+    border-radius:13px;
+    padding:20px;
+}
+
+.guide span{
+    font-size:30px;
+}
+
+.guide h3{
+    margin:10px 0 5px;
+}
+
+.guide p{
+    color:#8793a1;
+    font-size:13px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#03060a;
+    border-top:1px solid #1c2733;
+    margin-top:30px;
+}
+
+.footer-main{
+    padding:40px 0;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.footer-logo span{
+    color:#087df5;
+}
+
+.footer-main p{
+    color:#778594;
+    font-size:13px;
+    margin-top:8px;
+}
+
+.footer-col h3{
+    margin-bottom:12px;
+    font-size:15px;
+}
+
+.footer-col a{
+    display:block;
+    color:#8d9aa8;
+    font-size:13px;
+    margin:7px 0;
+}
+
+.footer-col a:hover{
+    color:#1685ff;
+}
+
+.footer-bottom{
+    border-top:1px solid #17212c;
+    padding:18px;
+    text-align:center;
+    color:#687584;
+    font-size:12px;
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+    position:fixed;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%) translateY(100px);
+    background:#101923;
+    border:1px solid #087df5;
+    padding:13px 20px;
+    border-radius:9px;
+    color:white;
+    z-index:5000;
+    opacity:0;
+    transition:.3s;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .top-header{
+        flex-wrap:wrap;
+        padding:12px 0;
+    }
+
+    .logo{
+        min-width:auto;
+    }
+
+    .search-box{
+        order:3;
+        flex-basis:100%;
+    }
+
+    .header-actions{
+        margin-left:auto;
+    }
+
+    .hero h2{
+        font-size:36px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:94%;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-content{
+        padding:40px 0;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .buy-sell{
+        padding:18px;
+    }
+
+    .buy-sell-grid{
+        grid-template-columns:1fr;
+    }
+
+    .buy-box,
+    .sell-box{
+        min-height:160px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .guide-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+    }
+
+    .logo-text h1{
+        font-size:20px;
+    }
+
+    .login-btn{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container top-header">
+
+    <a href="#home" class="logo">
+
+        <div class="logo-icon">🔧</div>
+
+        <div class="logo-text">
+            <h1>Technician <span>Brother</span></h1>
+            <p>Buy • Sell • Repair • Service</p>
+        </div>
+
+    </a>
+
+    <div class="search-box">
+        <input id="searchInput"
+               type="text"
+               placeholder="Search products, brands, services...">
+
+        <button onclick="searchSite()">🔍</button>
+    </div>
+
+    <div class="header-actions">
+
+        <a href="#" class="login-btn"
+           onclick="showMessage('Login system will be added later.'); return false;">
+           👤 Login / Sign Up
+        </a>
+
+        <span class="cart">🛒</span>
+
+    </div>
+
+</div>
+
+<nav class="navbar">
+
+<div class="container nav-inner">
+
+    <a class="nav-item active" href="#home">🏠 Home</a>
+    <a class="nav-item" href="#categories">❄️ AC</a>
+    <a class="nav-item" href="#categories">🧊 Fridge</a>
+    <a class="nav-item" href="#categories">💨 Cooler</a>
+    <a class="nav-item" href="#categories">🧺 Washing Machine</a>
+    <a class="nav-item" href="#categories">💧 RO</a>
+    <a class="nav-item" href="#categories">📷 Cameras</a>
+    <a class="nav-item" href="#categories">⚡ House Wiring</a>
+    <a class="nav-item" href="#categories">🚿 Geyser</a>
+    <a class="nav-item" href="#categories">🏠 Home Appliances</a>
+    <a class="nav-item" href="#buy-sell">🛒 Buy / Sell</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main id="home">
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+    <span class="badge">
+        🔧 Your Trusted Repair & Buy/Sell Platform
+    </span>
+
+    <h2>
+        All Home Appliances
+        <span>Under One Roof</span>
+    </h2>
+
+    <p>
+        Buy products, sell your old appliances, learn repair solutions
+        and find useful information about AC, fridge, cooler, washing
+        machine, RO, cameras, house wiring, geyser and more.
+    </p>
+
+    <a href="#categories" class="btn">
+        Explore Categories →
+    </a>
+
+    <a href="#buy-sell" class="btn secondary" style="margin-left:8px;">
+        Buy & Sell
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories">
+
+<div class="container">
+
+<div class="section-title">
+
+    <h2>Browse by Category</h2>
+
+    <p>
+        Find products, repair guides and services for your needs
+    </p>
+
+</div>
+
+
+<div class="category-grid">
+
+<div class="category-card"
+     onclick="showMessage('AC section selected')">
+
+    <div class="category-icon">❄️</div>
+
+    <h3>AC</h3>
+
+    <p>Cooling, repair & maintenance</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('Fridge section selected')">
+
+    <div class="category-icon">🧊</div>
+
+    <h3>Fridge</h3>
+
+    <p>Cooling & troubleshooting</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('Cooler section selected')">
+
+    <div class="category-icon">💨</div>
+
+    <h3>Cooler</h3>
+
+    <p>Cooling & maintenance</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('Washing Machine section selected')">
+
+    <div class="category-icon">🧺</div>
+
+    <h3>Washing Machine</h3>
+
+    <p>Problems & solutions</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('RO section selected')">
+
+    <div class="category-icon">💧</div>
+
+    <h3>RO</h3>
+
+    <p>Purifier & filter information</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('Camera section selected')">
+
+    <div class="category-icon">📷</div>
+
+    <h3>Cameras</h3>
+
+    <p>CCTV & security systems</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('House Wiring section selected')">
+
+    <div class="category-icon">⚡</div>
+
+    <h3>House Wiring</h3>
+
+    <p>Electrical information</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('Geyser section selected')">
+
+    <div class="category-icon">🚿</div>
+
+    <h3>Geyser</h3>
+
+    <p>Water heating information</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('Home Appliances section selected')">
+
+    <div class="category-icon">🏠</div>
+
+    <h3>Home Appliances</h3>
+
+    <p>Useful home products</p>
+
+</div>
+
+
+<div class="category-card"
+     onclick="showMessage('More categories coming soon')">
+
+    <div class="category-icon">•••</div>
+
+    <h3>More</h3>
+
+    <p>More categories coming soon</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BUY & SELL ================= -->
+
+<section id="buy-sell">
+
+<div class="container">
+
+<div class="buy-sell">
+
+<div class="buy-sell-head">
+
+<div>
+
+    <h2>🛒 Buy & Sell</h2>
+
+    <p>
+        Buy new or used items, or list your products for sale.
+    </p>
+
+</div>
+
+<span style="color:#1685ff;font-size:13px;">
+    ℹ️ How it works?
+</span>
+
+</div>
+
+
+<div class="buy-sell-grid">
+
+
+<div class="buy-box">
+
+<div>
+
+    <h3>Buy</h3>
+
+    <p>
+        Find useful appliances and products from different categories.
+    </p>
+
+    <button class="btn"
+            onclick="showMessage('Buy section opened')">
+        Shop Now →
+    </button>
+
+</div>
+
+<div class="big-icon">🛒</div>
+
+</div>
+
+
+<div class="sell-box">
+
+<div>
+
+    <h3>Sell</h3>
+
+    <p>
+        List your old or new products and reach interested buyers.
+    </p>
+
+    <button class="btn"
+            onclick="showMessage('Selling form will be added soon')">
+        Start Selling →
+    </button>
+
+</div>
+
+<div class="big-icon">🏷️</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+    <h2>⭐ Featured Products</h2>
+
+    <p>Popular products and useful appliance items</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<div class="product-card">
+
+<div class="product-image">❄️</div>
+
+<div class="product-info">
+
+<span class="product-tag">BEST SELLER</span>
+
+<h3>1.5 Ton Inverter AC</h3>
+
+<div class="price">₹32,999</div>
+
+<div class="rating">⭐ 4.5 (120)</div>
+
+<button class="add-cart"
+        onclick="addToCart('1.5 Ton Inverter AC')">
+        🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">🧊</div>
+
+<div class="product-info">
+
+<span class="product-tag">POPULAR</span>
+
+<h3>Double Door Fridge</h3>
+
+<div class="price">₹28,499</div>
+
+<div class="rating">⭐ 4.6 (98)</div>
+
+<button class="add-cart"
+        onclick="addToCart('Double Door Fridge')">
+        🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">🧺</div>
+
+<div class="product-info">
+
+<span class="product-tag">HOT DEAL</span>
+
+<h3>Front Load Washing Machine</h3>
+
+<div class="price">₹26,999</div>
+
+<div class="rating">⭐ 4.4 (87)</div>
+
+<button class="add-cart"
+        onclick="addToCart('Front Load Washing Machine')">
+        🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">📷</div>
+
+<div class="product-info">
+
+<span class="product-tag">NEW</span>
+
+<h3>CCTV Camera HD</h3>
+
+<div class="price">₹2,499</div>
+
+<div class="rating">⭐ 4.3 (64)</div>
+
+<button class="add-cart"
+        onclick="addToCart('CCTV Camera HD')">
+        🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">💧</div>
+
+<div class="product-info">
+
+<span class="product-tag">TOP RATED</span>
+
+<h3>RO Water Purifier</h3>
+
+<div class="price">₹11,999</div>
+
+<div class="rating">⭐ 4.5 (72)</div>
+
+<button class="add-cart"
+        onclick="addToCart('RO Water Purifier')">
+        🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="services">
+
+<div class="service">
+
+<div class="service-icon">🔧</div>
+
+<h3>Expert Technicians</h3>
+
+<p>Skilled and verified service professionals.</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">✅</div>
+
+<h3>Genuine Products</h3>
+
+<p>Product information and quality-focused listings.</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">🚚</div>
+
+<h3>Fast Delivery</h3>
+
+<p>Delivery options can be added later.</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">🛡️</div>
+
+<h3>Secure Platform</h3>
+
+<p>Designed for a simple and reliable experience.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GUIDES ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+    <h2>🔧 Technician Guides</h2>
+
+    <p>Learn about common appliance problems and maintenance.</p>
+
+</div>
+
+
+<div class="guide-grid">
+
+
+<div class="guide">
+
+<span>❄️</span>
+
+<h3>AC Troubleshooting</h3>
+
+<p>
+Learn about common AC problems, maintenance and basic troubleshooting.
+</p>
+
+<br>
+
+<button class="btn"
+        onclick="showMessage('AC Guide selected')">
+Read Guide →
+</button>
+
+</div>
+
+
+<div class="guide">
+
+<span>🧊</span>
+
+<h3>Fridge Problems</h3>
+
+<p>
+Learn about common refrigerator issues and maintenance information.
+</p>
+
+<br>
+
+<button class="btn"
+        onclick="showMessage('Fridge Guide selected')">
+Read Guide →
+</button>
+
+</div>
+
+
+<div class="guide">
+
+<span>🧺</span>
+
+<h3>Washing Machine</h3>
+
+<p>
+Explore common problems, maintenance tips and useful information.
+</p>
+
+<br>
+
+<button class="btn"
+        onclick="showMessage('Washing Machine Guide selected')">
+Read Guide →
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer-main">
+
+<div>
+
+<div class="footer-logo">
+Technician <span>Brother</span>
+</div>
+
+<p>
+Buy • Sell • Repair • Service
+</p>
+
+<p>
+Your home appliance and technician information platform.
+</p>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>Quick Links</h3>
+
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#buy-sell">Buy & Sell</a>
+<a href="#">About Us</a>
+<a href="#">Contact</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>Categories</h3>
+
+<a href="#categories">AC</a>
+<a href="#categories">Fridge</a>
+<a href="#categories">Washing Machine</a>
+<a href="#categories">RO</a>
+<a href="#categories">Cameras</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>More</h3>
+
+<a href="#categories">House Wiring</a>
+<a href="#categories">Geyser</a>
+<a href="#categories">Cooler</a>
+<a href="#categories">Home Appliances</a>
+<a href="#buy-sell">Sell Product</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Technician Brother. All rights reserved.
+
+</div>
+
+</footer>
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast" class="toast"></div>
+
+
+<script>
+
+function showMessage(message){
+
+    const toast = document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },2500);
+
+}
+
+
+function addToCart(product){
+
+    showMessage(product + " added to cart!");
+
+}
+
+
+function searchSite(){
+
+    const input =
+        document.getElementById("searchInput").value.trim();
+
+    if(input === ""){
+
+        showMessage("Please type something to search.");
+
+        return;
+
+    }
+
+    showMessage("Searching for: " + input);
+
+}
+
+
+document
+.getElementById("searchInput")
+.addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+
+        searchSite();
+
+    }
+
+});
+
+
+</script>
+
+</body>
+</html>
